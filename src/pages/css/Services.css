@@ -1,0 +1,25 @@
+.services-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  color: #ff4d4d;
+  margin-bottom: 1.5rem;
+}
+
+.service-list {
+  list-style-type: '✅ ';
+  padding-left: 0;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.service-list li {
+  margin-bottom: 0.75rem;
+}

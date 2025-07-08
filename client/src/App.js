@@ -12,6 +12,7 @@ import FloatingButtons from './components/FloatingButtons'; // ✅ Import it
 
 function App() {
   return (
+    <BrowserRouter basename="/krishna-clinic">
     <LanguageProvider>
       <Router>
         {/* Always show header */}
@@ -28,6 +29,8 @@ function App() {
         </Routes>
       </Router>
     </LanguageProvider>
+    </BrowserRouter>
+
   );
 }
 

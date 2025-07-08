@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE_URL =
-  process.env.NODE_ENV === 'production'
-    ? 'https://your-live-backend-url.com'
-    : 'http://localhost:5000';
+const API_BASE_URL = 'https://krishna-clinic-backend.onrender.com';
+
+// const API_BASE_URL =
+//   process.env.NODE_ENV === 'production'
+//     ? 'https://your-live-backend-url.com'
+//     : 'http://localhost:5000';
 
 const AdminAppointments = () => {
   const [appointments, setAppointments] = useState([]);

@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import './css/AppointmentForm.css';
 
-const API_BASE_URL =
-  process.env.NODE_ENV === 'production'
-    ? 'https://your-live-backend-url.com' // 🔁 Replace with real backend
-    : 'http://localhost:5000';
+const API_BASE_URL = 'https://krishna-clinic-backend.onrender.com';
+
+// const API_BASE_URL =
+//   process.env.NODE_ENV === 'production'
+//     ? 'https://your-live-backend-url.com' // 🔁 Replace with real backend
+//     : 'http://localhost:5000';
 
 const AppointmentForm = () => {
   const [fullName, setFullName] = useState('');

@@ -1,0 +1,163 @@
+.clinic-header {
+  background: linear-gradient(to right, #ff4d4d, #0044cc); /* Red/Blue */
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clinic-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.clinic-name h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #fff8d1;
+  margin-top: 0.3rem;
+}
+
+.header-right {
+  text-align: right;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.nav-bar {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffff99;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-left,
+  .header-right {
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .clinic-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.language-toggle {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+}
+
+.language-toggle button {
+  background-color: #fff;
+  color: #0044cc;
+  border: 1px solid #0044cc;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.language-toggle button:hover {
+  background-color: #0044cc;
+  color: #fff;
+}
+/* Hide menu by default on mobile */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
+}
+
+.nav-bar {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav-bar {
+    display: none;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 100;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-bar.open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+    text-align: center;
+  }
+}

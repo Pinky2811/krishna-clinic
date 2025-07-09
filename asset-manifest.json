@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/krishna-clinic/static/css/main.c0861e2c.css",
+    "main.css": "/krishna-clinic/static/css/main.ae14c00c.css",
     "main.js": "/krishna-clinic/static/js/main.a65f5621.js",
     "static/js/453.10b43e20.chunk.js": "/krishna-clinic/static/js/453.10b43e20.chunk.js",
     "static/media/logo.png.jpg": "/krishna-clinic/static/media/logo.png.3c05c0d21795a8f48f67.jpg",
     "index.html": "/krishna-clinic/index.html",
-    "main.c0861e2c.css.map": "/krishna-clinic/static/css/main.c0861e2c.css.map",
+    "main.ae14c00c.css.map": "/krishna-clinic/static/css/main.ae14c00c.css.map",
     "main.a65f5621.js.map": "/krishna-clinic/static/js/main.a65f5621.js.map",
     "453.10b43e20.chunk.js.map": "/krishna-clinic/static/js/453.10b43e20.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0861e2c.css",
+    "static/css/main.ae14c00c.css",
     "static/js/main.a65f5621.js"
   ]
 }

@@ -6,15 +6,24 @@ const { sendWhatsAppMessage } = require('./whatsappService');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://pinky2811.github.io'],
+  methods: ['GET', 'POST', 'PUT', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
+// ✅ Updated CORS to allow both local and GitHub Pages
+// app.use(cors({
+//   origin: ['http://localhost:3000', 'https://pinky2811.github.io']
+// }));
 
-app.use(cors());
 app.use(express.json());
 
+// ✅ PostgreSQL setup
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
-// 1. Get all appointments
+// ✅ 1. Get all appointments
 app.get('/api/appointments', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM appointments ORDER BY id DESC');
@@ -24,7 +33,7 @@ app.get('/api/appointments', async (req, res) => {
   }
 });
 
-// 2. Add new appointment
+// ✅ 2. Add new appointment
 app.post('/api/appointments', async (req, res) => {
   const { fullName, mobile, reason, datetime } = req.body;
 
@@ -35,11 +44,11 @@ app.post('/api/appointments', async (req, res) => {
       [fullName, mobile, reason, datetime]
     );
 
-    // Send WhatsApp to patient
+    // ✅ Send WhatsApp to patient
     const patientMsg = `👋 Namaste ${fullName},\n\nYour appointment at Krishna Clinic is booked.\n🕒 ${datetime}\n📍 Reason: ${reason}\n📞 ${process.env.CLINIC_PHONE}\n\nThank you! 🙏`;
     sendWhatsAppMessage(mobile, patientMsg);
 
-    // Send WhatsApp to admin
+    // ✅ Notify admin
     const adminMsg = `🆕 New Appointment:\n👤 ${fullName}\n📞 ${mobile}\n📅 ${datetime}\n💬 ${reason}`;
     sendWhatsAppMessage(process.env.ADMIN_MOBILE, adminMsg);
 
@@ -50,7 +59,7 @@ app.post('/api/appointments', async (req, res) => {
   }
 });
 
-// 3. Confirm/reject appointment
+// ✅ 3. Confirm or reject appointment
 app.put('/api/appointments/:id/status', async (req, res) => {
   const { id } = req.params;
   const { status } = req.body;

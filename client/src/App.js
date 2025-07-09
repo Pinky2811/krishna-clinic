@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // ✅ Only import BrowserRouter
 import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -12,7 +12,7 @@ import FloatingButtons from './components/FloatingButtons';
 
 function App() {
   return (
-    <BrowserRouter basename="/krishna-clinic"> {/* ✅ Correct base path for GitHub Pages */}
+    <BrowserRouter basename="/krishna-clinic"> {/* ✅ Fix starts here */}
       <LanguageProvider>
         <Header />
         <FloatingButtons />

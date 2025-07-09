@@ -51,7 +51,9 @@ const AppointmentForm = () => {
           <input type="tel" pattern="[6-9]{1}[0-9]{9}" title="Enter a valid 10-digit Indian mobile number" required placeholder="Mobile Number"
   value={mobile} onChange={(e) => setMobile(e.target.value)}/>
           <input type="text" placeholder="Reason for Visit" value={reason} required onChange={(e) => setReason(e.target.value)} />
-          <input type="datetime-local" value={datetime} required onChange={(e) => setDatetime(e.target.value)} />
+         <input type="date" className="form-control" />
+
+          {/* <input type="datetime-local" value={datetime} required onChange={(e) => setDatetime(e.target.value)} /> */}
           <button type="submit">Submit</button>
         </form>
       </div>

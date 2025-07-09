@@ -38,3 +38,25 @@
 .appointment-form button:hover {
   background-color: #218838;
 }
+/* Prevent form submit button from being hidden behind floating buttons */
+.appointment-form {
+  padding-bottom: 100px; /* enough space for floating buttons */
+}
+
+/* Optional: adjust submit button */
+.appointment-form button[type="submit"] {
+  margin-top: 20px;
+  z-index: 2;
+  position: relative;
+}
+.appointment-section {
+  padding: 20px;
+  padding-bottom: 120px; /* 👈 Add this */
+}
+
+@media (min-width: 768px) {
+  .appointment-section {
+    padding-bottom: 40px; /* Less padding on desktop */
+  }
+}
+
